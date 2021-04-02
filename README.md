@@ -1,2 +1,2 @@
-# JS-hw1
-JS-hw1
+# JS-hw
+JS-hw
