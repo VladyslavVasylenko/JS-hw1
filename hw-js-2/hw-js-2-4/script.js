@@ -1,4 +1,4 @@
 "use strict";
 
-let usreNumber = prompt('Your number?', ' ');
+let userNumber = prompt('Your number?', ' ');
 
