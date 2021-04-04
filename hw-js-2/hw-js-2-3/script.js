@@ -1,4 +1,4 @@
-"use stict"
+"use strict";
 
 let n = prompt('Your number?'); 
 let divisor = [];
