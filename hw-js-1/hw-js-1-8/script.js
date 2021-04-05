@@ -1,3 +1,5 @@
+"use strict";
+
 let userSquaredP = prompt(' Ввидите периметр квадрата ' );
 let userCircleD = prompt(' Введите длину окружности ' );
 

@@ -1,3 +1,5 @@
+"use strict";
+
 let userDate = prompt('Enter the date - day-month-year ');
 userDate = userDate .split('-');
 

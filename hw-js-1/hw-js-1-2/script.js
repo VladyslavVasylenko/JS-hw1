@@ -1,3 +1,5 @@
+"use strict";
+
 let number = prompt('Введите число от 0 до 9', 0);
 switch(number) {
   case '0':

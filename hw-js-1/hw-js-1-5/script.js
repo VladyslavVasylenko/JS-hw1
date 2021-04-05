@@ -1,3 +1,5 @@
+"use strict";
+
 let number = prompt('Введите пятиразрядное число', 0);
   number = number + '';
   

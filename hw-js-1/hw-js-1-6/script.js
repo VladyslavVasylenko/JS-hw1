@@ -1,3 +1,4 @@
+"use strict";
 let amount = prompt('Enter the amount of USD:', 0);
 let currency = prompt('EUR = 1, UAH = 2, AZN = 3', 0);
 

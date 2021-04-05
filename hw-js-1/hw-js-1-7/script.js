@@ -1,3 +1,5 @@
+"use strict";
+
 let amount = prompt('Ваша сумма заказа:');
   if (amount >=200 && amount < 300) {
     alert('Сумма к оплате ' + amount/100*97 + ' скидка будет 3%');
