@@ -11,18 +11,19 @@
   <p>Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.</p>
   
   <div class="button">
-    <button id="b06">Calculator</button>
+    <button id="calculator">Calculator</button>
   </div>
 
   
   <script>
   "use strict";
-  var b06 = document.getElementById("b06");
-  b06.onclick = function () {
+
+  let calculator = document.getElementById("calculator");
+  calculator.onclick = function () {
     do {
-      var a = +prompt('Введите первое число');
-      var b = +prompt('Введите второе число');
-      var i = prompt('Выберите знак - + / *');
+      let a = +prompt('Введите первое число');
+      let b = +prompt('Введите второе число');
+      let i = prompt('Выберите знак - + / *');
 
       switch (i) {
         case '+':
