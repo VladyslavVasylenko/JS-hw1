@@ -1,17 +1,24 @@
-/*let user = prompt("Введите число от 1 до 100","");
-user = parseInt(user);
+function send() {
+  let n, pcNum, out, tempOut;
+
+  pcNum = Math.floor((Math.random() * 100) + 1);
+  tempOut = document.getElementById('temp-out');
+  tempOut.innerHTML = pcNum;
 
 
-  if( n < user) {
-    a="Больше"
-  };
-  if( n > user ) {
-    a="Меньше"
-  };
-  if( n == user ) {
-    a="Угадал"
-  }; 
+  n = document.getElementById('userNum').value;
+  out = document.getElementById('out');
 
+  if (n > pcNum) {
+    out.innerHTML = 'pc indicated a number less than yours'
+  }
 
-alert(a);*/
+  else if (n < pcNum) {
+    out.innerHTML = 'pc indicated a number greater than yours'
+  } 
 
+  else if (n == pcNum) {
+    out.innerHTML = 'pc win';
+  }
+
+}

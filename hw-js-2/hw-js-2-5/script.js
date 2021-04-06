@@ -33,11 +33,15 @@ for (let i = 0; i < maxNumbers; i++ ) {
   }
 
   statistic.numbers.push(number);
+
+  let result = statistic;
 }
 
+document.getElementById("result-first").innerHTML = 'Number of positive number: ' + statistic.positive + '.';
+document.getElementById("result-second").innerHTML = 'Number of negative number: ' + statistic.negative + '.';
+document.getElementById("result-three").innerHTML = 'Number of zero number: ' + statistic.zero + '.';
+document.getElementById("result-four").innerHTML = 'Number of odd number: ' + statistic.odd + '.';
+document.getElementById("result-five").innerHTML = 'Number of even number: ' + statistic.even + '.';
+document.getElementById("result-six").innerHTML = 'Your numbers: ' + statistic.numbers + '.';
+
 console.log(statistic);
-
-
-
-
-
