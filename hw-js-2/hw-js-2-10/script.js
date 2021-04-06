@@ -1,3 +1,4 @@
+"use strict";
 function send() {
   let n, pcNum, out, tempOut;
 
@@ -9,13 +10,13 @@ function send() {
   n = document.getElementById('userNum').value;
   out = document.getElementById('out');
 
-  if (n > pcNum) {
+  if (pcNum < n) {
     out.innerHTML = 'pc indicated a number less than yours';
   }
-  if (n < pcNum) {
+  if (pcNum > n) {
     out.innerHTML = 'pc indicated a number greater than yours';
-  } else if(n == pcNum) {
+  } 
+  if(pcNum == n) {
     out.innerHTML = 'pc guess your number';
   }
-
 }
