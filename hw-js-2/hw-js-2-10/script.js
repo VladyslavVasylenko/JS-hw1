@@ -10,15 +10,12 @@ function send() {
   out = document.getElementById('out');
 
   if (n > pcNum) {
-    out.innerHTML = 'pc indicated a number less than yours'
+    out.innerHTML = 'pc indicated a number less than yours';
   }
-
-  else if (n < pcNum) {
-    out.innerHTML = 'pc indicated a number greater than yours'
-  } 
-
-  else if (n == pcNum) {
-    out.innerHTML = 'pc win';
+  if (n < pcNum) {
+    out.innerHTML = 'pc indicated a number greater than yours';
+  } else if(n == pcNum) {
+    out.innerHTML = 'pc guess your number';
   }
 
 }
