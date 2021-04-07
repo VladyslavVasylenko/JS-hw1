@@ -16,7 +16,7 @@ function send() {
   if (pcNum > n) {
     out.innerHTML = 'pc indicated a number greater than yours';
   } 
-  if (pcNum == n) {
+  if(pcNum == n) {
     out.innerHTML = 'pc guess your number';
   }
 }

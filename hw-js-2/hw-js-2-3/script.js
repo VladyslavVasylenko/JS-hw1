@@ -1,6 +1,6 @@
 "use strict";
 
-let n = prompt('Your number?', ''); 
+let n = +prompt('Your number?', ''); 
 let divisor = [];
 
 if (n % 1 == 0) {
