@@ -1,11 +1,24 @@
 "use strict";
 
-let userNumber = prompt('Your number?', '');
+let lengthRect = +prompt('Specify the length of the rectangle: '); //length Rectangle
+let widthRect = +prompt('Specify the width of the rectangle: ');//Width Rectangle
 
-/*console.log(String(userNumber).length);*/ //первый вариант
+function square (a, b) {
+  let result;
 
-function numDigits(x) {
-  return Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1;
+  if (result = (a * b) / 2) {
+    alert("The area of the triangle is: " + result);
+
+    return result
+  } else if (result = a / 2) {
+    alert("The area of the square is: " + result);
+
+    return result
+  } else if (result = b / 2) {
+    alert("The area of the square is: " + result);
+
+    return result
+  }
 }
 
-console.log(numDigits(userNumber));// второй вариант
+square(lengthRect,widthRect);
