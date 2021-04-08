@@ -8,10 +8,10 @@ let table, row, cell, i, j;
   table.style.backgroundColor = 'grey';
   table.style.margin = '0 auto';
 
-  for (i=1; i<11; i++) {
+  for ( i = 1; i < 11; i++ ) {
     row = document.createElement('tr');
 
-    for (j=1; j<10; j++) {
+    for ( j = 1; j < 10; j++ ) {
       cell = document.createElement(i == 1 || j == 1 ? 'th' : 'td');
       cell.appendChild(document.createTextNode(i*j));
       cell.style.padding = '15px';
@@ -21,18 +21,18 @@ let table, row, cell, i, j;
       row.appendChild(cell);
     }
 
-  table.appendChild(row);
+  table.appendChild( row );
   }
 
-  document.body.appendChild(table);
+  document.body.appendChild( table );
 
   //вариант через 2
-  /*function table(){
-  let x=prompt("Enter a number:",2);
+  /*function table() {
+  let x=prompt ( "Enter a number:", 2 );
   let alertBody = '';
-  for (let i=1; i<10; i++) {
-    alertBody += x + "*" + i +"="+x*i + '\n';
+  for ( let i = 1; i < 10; i++ ) {
+    alertBody += x + "*" + i + "=" + x*i + '\n';
   }
-  alert(alertBody);
+  alert( alertBody );
 }
 table();*/

@@ -12,7 +12,7 @@ const statistic = {
 const maxNumbers = 10;
 
 for (let i = 0; i < maxNumbers; i++ ) {
-  const number = +prompt('Enter number');
+  const number = +prompt('Enter number ');
   
   if (isNaN(number)) {
     continue;

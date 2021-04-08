@@ -1,8 +1,13 @@
 "use strict";
 
-const days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
-let currDay = 0;
+let userH = +prompt("Indicate your hour: ", "");
+let userM = +prompt("Indicate your minutes: ", "");
+let userS = +prompt("Indicate your seconds: ", "");
 
-while (confirm(`${days[currDay]}. Хотите увидеть следующий день?`)) {
-  currDay = (currDay + 1) % days.length;
+function second (a,b,c) {
+  let result = ((a * 60 * 60) + (b * 60) + c);
+  alert("It turned out: " + result + " seconds.");
 }
+
+second(userH, userM, userS);
+
