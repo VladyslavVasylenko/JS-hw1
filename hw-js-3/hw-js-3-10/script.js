@@ -1,23 +1,16 @@
 "use strict";
 
-/*let userFirstDate = +prompt(new Date("Indicate your date: ", "").split('-'));
-let userSecondDate = +prompt(new Date("Indicate your date: ", "").split('-'));
+function userDate () {
+  let secondA = Date.parse('2022.04.09')/1000;
+  let secondB = Date.parse('2021.04.06')/1000;
+  console.log('First date - ' + secondA + ' Second date - ' + secondB);
 
-function differenceBetweenDates (a,b) {
-  a = new Date().getTime();
-  b = new Date().getTime();
-  let result = a - b;
-  alert(result);
+  let result = secondA - secondB;
+  console.log(result);
+
+  let b = ( result  / 60 / 60 );
+  let c = ( result  / 60);
+  console.log("It turned out: " + b + ':' + c + ':' + result +" hh.mm.ss");
 }
 
-differenceBetweenDates(userFirstDate, userSecondDate);*/
-
-var now  = +prompt("Indicate your date: ", "").split('-');
-var then = +prompt("Indicate your date: ", "").split('-');
-function timeLeft(a,b) {
-  var diff = a - b; 
-
-  console.log('Time remaining to ' + diff );
-}
-
-timeLeft(now,then);
+userDate();
