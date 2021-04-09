@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <p>Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.</p>
+  
+  <div class="button">
+    <button id="calculator">Calculator</button>
+  </div>
+
+  
+  <script>
+  "use strict";
+
+  let calculator = document.getElementById("calculator");
+  calculator.onclick = function () {
+    do {
+      let a = +prompt('Введите первое число');
+      let b = +prompt('Введите второе число');
+      let i = prompt('Выберите знак - + / *');
+
+      switch (i) {
+        case '+':
+          alert(a + b);
+          break;
+        case '-':
+          alert(a - b);
+          break;
+        case '/':
+          alert(a / b);
+          break;
+        case '*':
+          alert(a * b);
+        default:
+          break;
+      }
+
+    } while (confirm('Хотите ли вы решить еще один пример?'));
+  }
+  </script>
+</body>
+</html>

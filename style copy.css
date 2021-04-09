@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header-container {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+}
+
+.text-list {
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.text-list__item {
+  list-style: circle;
+}
+
+/*.header-container__nav { }*/
+.header-container__list {
+  width: 20%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.219);
+  padding: 1%;
+}
+
+.header-container__item {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.header-container__item--item {
+  text-decoration: none;
+  color: #ff6600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container__list {
+    width: 20%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5%;
+  }
+  .header-container__item {
+    margin-bottom: 30%;
+  }
+  .header-container__item:last-child {
+    margin-bottom: 0%;
+  }
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 255, 0.767);
+  margin: 3% 3%;
+}
+
+.title {
+  font-size: 24px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: green;
+  padding: 0 10%;
+}
+
+.box-border {
+  border: 1px solid rgba(255, 136, 0, 0.932);
+  margin: 3% 1%;
+}
+
+.slogan {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: left;
+  padding: 0 3%;
+}
+
+.link {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: teal;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
