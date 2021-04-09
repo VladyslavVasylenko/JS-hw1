@@ -29,15 +29,15 @@ function road(distance){
   let speed = car["average speed"];
   let relax = 1;
   if (a / speed < 4) {
-    document.write("No relax.");
+    document.write("No relax. ");
   }
-  else if(a / speed > 4 ){
+  if(a / speed > 4 ){
     let result = a / speed + relax;
-    document.write("You need " + result + " hour.");
+    document.write("You need " + result + " hour " + user + " km.");
   } 
-  else if(a / speed > 10){
-    result = a / speed + relax + 1;
-    document.write("You need " + result + " hour.");
+  else if(a / speed >= 10){
+    result = a / speed + (1 * 2);
+    document.write("You need " + result + " hour " + user + " km.");
   }
 }
 
