@@ -3,6 +3,7 @@
 function userDate () {
   let secondA = Date.parse('2022.04.09')/1000;
   let secondB = Date.parse('2021.04.06')/1000;
+  
   console.log('First date - ' + secondA + ' Second date - ' + secondB);
 
   let result = secondA - secondB;
