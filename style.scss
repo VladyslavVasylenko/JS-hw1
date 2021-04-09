@@ -13,6 +13,14 @@ body{
   position: fixed;
 }
 
+.text-list { 
+  text-align: left;
+  font-family: $font-family;
+}
+
+.text-list__item { 
+  list-style: circle;
+}
 /*.header-container__nav { }*/
 
 .header-container__list { 
@@ -34,6 +42,8 @@ body{
   color: rgb(255, 102, 0);
   cursor: pointer;
 }
+
+
 
 @media screen and (max-width:768px) {
   .header-container__list { 

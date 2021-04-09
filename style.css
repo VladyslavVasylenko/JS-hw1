@@ -17,6 +17,15 @@ body {
   position: fixed;
 }
 
+.text-list {
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.text-list__item {
+  list-style: circle;
+}
+
 /*.header-container__nav { }*/
 .header-container__list {
   width: 20%;
