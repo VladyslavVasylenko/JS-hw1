@@ -13,21 +13,20 @@ function showTime(a,b,c) {
 
 showTime(time.userTimeH, time.userTimeM, time.userTimeS);
 
-
 function timerTime (a,b,c,d) {
-
   let result;
 
   if (c <= 60) {
     result = a + ':' + b + ':' + (d + c);
     document.write(result + '<br>');
-  } else if (c >= 60) {
-    result =  a + ':' + (b + (d - c) / 30) + ':' + (d - c);
+  } 
+  if (c >= 60) {
+    result =  a + ':' + (b + (d - c) / 60) + ':' + (d - c);
     document.write(result + '<br>');
   }
 
   return result;
 }
 
-timerTime(time.userTimeH, time.userTimeM, time.userTimeS, 61);
+timerTime(time.userTimeH, time.userTimeM, time.userTimeS, 60);
 
