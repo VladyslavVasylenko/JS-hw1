@@ -1,12 +1,33 @@
 "use strict";
 
 const time = {
-  userTime: new Date(),
-};
-
-function showTime(a) {
-  let result = a;
-  document.write(result);
+  userTimeH: 1,
+  userTimeM: 20,
+  userTimeS: 30,
 }
 
-showTime(time.userTime);
+function showTime(a,b,c) {
+  let result = a + ':' + b + ':' + c;
+  document.write(result + '<br>');
+}
+
+showTime(time.userTimeH, time.userTimeM, time.userTimeS);
+
+
+function timerTime (a,b,c,d) {
+
+  let result;
+
+  if (c <= 60) {
+    result = a + ':' + b + ':' + (d + c);
+    document.write(result + '<br>');
+  } else if (c >= 60) {
+    result =  a + ':' + (b + (d - c) / 30) + ':' + (d - c);
+    document.write(result + '<br>');
+  }
+
+  return result;
+}
+
+timerTime(time.userTimeH, time.userTimeM, time.userTimeS, 61);
+
