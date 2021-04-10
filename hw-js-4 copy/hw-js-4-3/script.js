@@ -1,14 +1,12 @@
 "use strict";
 
-let userNumFirst = +prompt('Your number?', ''); 
-let userNumSecond = +prompt('Your number?', ''); 
-let userNumThree = +prompt('Your number?', ''); 
+const time = {
+  userTime: new Date(),
+};
 
-function numbers (a,b,c) {
-  let result = (' ' + a + b + c);
-  let number = Number(result);
-  alert('Your number: ' + number);
-  console.log(typeof number);
+function showTime(a) {
+  let result = a;
+  document.write(result);
 }
 
-numbers(userNumFirst, userNumSecond, userNumThree);
+showTime(time.userTime);

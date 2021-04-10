@@ -16,18 +16,19 @@ let table, row, cell, i, j;
       cell.appendChild(document.createTextNode(i*j));
       cell.style.padding = '15px';
       cell.style.color = '#fff';
-      cell.style.background = 'rgba(255, 115, 0, 0.849)';
+      cell.style.background = 'rgba(255, 115, 0, 0.800)';
       cell.style.width = 100 / 9 + '%';
       row.appendChild(cell);
     }
 
-  table.appendChild( row );
+    table.appendChild( row );
   }
 
   document.body.appendChild( table );
 
   //вариант через 2
-  /*function table() {
+  /*
+  function table() {
   let x=prompt ( "Enter a number:", 2 );
   let alertBody = '';
   for ( let i = 1; i < 10; i++ ) {
@@ -35,4 +36,5 @@ let table, row, cell, i, j;
   }
   alert( alertBody );
 }
-table();*/
+table();
+*/

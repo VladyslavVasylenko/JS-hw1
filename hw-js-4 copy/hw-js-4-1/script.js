@@ -1,4 +1,4 @@
-
+"use strict";
 
 let car = {
   manufacturer: "Audi",
@@ -8,8 +8,8 @@ let car = {
 }
 
 function ourCar(obj) {
-  
   let result = "";
+
   for (let i in obj) {
     if (obj.hasOwnProperty(i)) {
       result += i + " - " + obj[i] + "<br>";
@@ -28,15 +28,15 @@ function road(distance){
   let a = distance;
   let speed = car["average speed"];
   let relax = 1;
-  if (a / speed < 4) {
-    document.write("No relax. ");
-  }
-  if(a / speed > 4 ){
-    let result = a / speed + relax;
+
+  if (a / speed <= 4) {
+    let result = a / speed;
+    document.write("No relax. " + result + " hour " + user + " km.");
+  } else if (a / speed > 4) {
+    result = a / speed + relax;
     document.write("You need " + result + " hour " + user + " km.");
-  } 
-  else if(a / speed >= 10){
-    result = a / speed + (1 * 2);
+  } else if (a / speed > 8) {
+    result = a / speed + relax + 1;
     document.write("You need " + result + " hour " + user + " km.");
   }
 }
