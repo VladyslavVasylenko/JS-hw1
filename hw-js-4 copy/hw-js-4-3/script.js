@@ -3,29 +3,16 @@
 const time = {
 	currentTime: new Date(),
   addSeconds: function(seconds) {
-    const msToAdd = seconds * 1000;
-    const newTime = this.currentTime.getTime() + msToAdd;
-    
-    this.currentTime = new Date(newTime);
+    this.currentTime.setSeconds(this.currentTime.getSeconds() + seconds);
   },
   addMinutes: function(minutes) {
-    const minToAdd = minutes * 60 * 1000;
-    const newTime = this.currentTime.getTime() + minToAdd;
-    
-    this.currentTime = new Date(newTime);
+    this.currentTime.setMinutes(this.currentTime.getMinutes() + minutes);
   },
-  addHours: function(hours) {
-    const hoursToAdd = hours * 60 * 60 * 1000;
-    const newTime = this.currentTime.getTime() + hoursToAdd;
-    
-    this.currentTime = new Date(newTime);
+  addHours: function(hours) { 
+    this.currentTime.setTime(this.currentTime.getTime() + hours);
   },
   displayTime: function() {
-    const hours = this.currentTime.getHours();
-    const minutes = this.currentTime.getMinutes();
-    const seconds = this.currentTime.getSeconds();
-    
-    console.log(`${hours}:${minutes}:${seconds}`);
+    console.log(this.currentTime.toLocaleTimeString('en-GB'))
   }
 };
 
