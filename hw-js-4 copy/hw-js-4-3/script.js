@@ -1,6 +1,6 @@
 "use strict";
 
-let time = {
+const time = {
 	currentTime: new Date(),
   addSeconds: function(seconds) {
     const msToAdd = seconds * 1000;
