@@ -1,23 +1,23 @@
 "use strict";
 
 let audAcadem = [
-  { item_tab: 'Audience name', item_aud: 231, num_seats: 10, item_faculty:"Web"},
-  { item_tab: 'Audience name', item_aud: 251, num_seats: 14, item_faculty:"Designer"},
-  { item_tab: 'Audience name', item_aud: 271, num_seats: 20, item_faculty:"Developer"},
-  { item_tab: 'Audience name', item_aud: 131, num_seats: 10, item_faculty:"Web"},
-  { item_tab: 'Audience name', item_aud: 151, num_seats: 12, item_faculty:"Designer"},
-  { item_tab: 'Audience name', item_aud: 171, num_seats: 18, item_faculty:"Developer"},
+  { itemTab: 'Audience name', itemAud: 231, numSeats: 10, itemFaculty:"Web"},
+  { itemTab: 'Audience name', itemAud: 251, numSeats: 14, itemFaculty:"Designer"},
+  { itemTab: 'Audience name', itemAud: 271, numSeats: 20, itemFaculty:"Developer"},
+  { itemTab: 'Audience name', itemaud: 131, numSeats: 10, itemFaculty:"Web"},
+  { itemTab: 'Audience name', itemAaud: 151, numSeats: 12, itemFaculty:"Designer"},
+  { itemTab: 'Audience name', itemAud: 171, numSeats: 18, itemFaculty:"Developer"},
 ];
 
 const grup = [
-  { grupsName:'D1', studens:'15', item_faculty:"Developer", audienceA: 171, audienceB: 271},
-  { grupsName:'D2', studens:'10', item_faculty:"Web", audienceA: 131, audienceB: 231},
-  { grupsName:'D3', studens:'12', item_faculty:"Designer", audienceA: 251, audienceB: 151},
+  { grupsName:'D1', studens:'15', itemFaculty:"Developer", audienceA: 171, audienceB: 271},
+  { grupsName:'D2', studens:'10', itemFaculty:"Web", audienceA: 131, audienceB: 231},
+  { grupsName:'D3', studens:'12', itemFaculty:"Designer", audienceA: 251, audienceB: 151},
 ]
 
 function audience() {
   for(let info of audAcadem) {
-    console.log (`${info.item_tab}, ${info.item_aud}`);
+    console.log (`${info.itemTab}, ${info.itemAud}`);
   }
   console.log("\n");
 };
@@ -26,7 +26,7 @@ audience();
 
 function seat() {
   for(let info of audAcadem) {
-    console.log (`${info.item_tab}, ${info.item_aud}, number of seats: ${info.num_seats}`);
+    console.log (`${info.itemTab}, ${info.itemAud}, number of seats: ${info.numSeats}`);
   }
   console.log("\n");
 };
@@ -35,7 +35,7 @@ seat ();
 
 function faculty() {
   for(let info of audAcadem) {
-    console.log (`${info.item_tab}, ${info.item_aud}, faculty: ${info.item_faculty} `);
+    console.log (`${info.itemTab}, ${info.itemAud}, faculty: ${info.itemFaculty} `);
   }
   console.log("\n");
 };
@@ -54,3 +54,5 @@ showAud ();*/
 function showAud() {
 
 }
+
+//переделать добавить функции в массивы и разбить все отдельно для вызова
