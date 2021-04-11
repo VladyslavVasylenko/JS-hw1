@@ -24,20 +24,19 @@ ourCar(car);
 
 let user = +prompt('Which route to calculate: ');
 
-function road(distance){
-  let a = distance;
+function road(a){
   let speed = car["average speed"];
   let relax = 1;
 
-  if (a / speed <= 4) {
+  if (a / speed < 4) {
     let result = a / speed;
-    document.write("No relax. " + result + " hour " + user + " km.");
+    document.write("No relax. " + result + " hour " + a + " km.");
   } else if (a / speed > 4) {
-    result = a / speed + relax;
-    document.write("You need " + result + " hour " + user + " km.");
-  } else if (a / speed > 8) {
-    result = a / speed + relax + 1;
-    document.write("You need " + result + " hour " + user + " km.");
+    let result = a / speed + relax;
+    document.write("You need " + result + " hour " + a + " km.");
+  } else if (a / speed >= 8) {
+    let result = a / speed + relax + 1;
+    document.write("You need " + result + " hour " + a + " km.");
   }
 }
 
