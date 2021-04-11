@@ -1,32 +1,38 @@
 "use strict";
 
-const time = {
-  userTimeH: 1,
-  userTimeM: 20,
-  userTimeS: 30,
-}
-
-function showTime(a,b,c) {
-  let result = a + ':' + b + ':' + c;
-  document.write(result + '<br>');
-}
-
-showTime(time.userTimeH, time.userTimeM, time.userTimeS);
-
-function timerTime (a,b,c,d) {
-  let result;
-
-  if (c <= 60) {
-    let result = a + ':' + b + ':' + (d + c);
-    document.write(result + '<br>');
-  } 
-  if (c > 60) {
-    let result =  a + ':' + (b + (d - c) / 60) + ':' + (d - c);
-    document.write(result + '<br>');
+let time = {
+	currentTime: new Date(),
+  addSeconds: function(seconds) {
+    const msToAdd = seconds * 1000;
+    const newTime = this.currentTime.getTime() + msToAdd;
+    
+    this.currentTime = new Date(newTime);
+  },
+  addMinutes: function(minutes) {
+    const minToAdd = minutes * 60 * 1000;
+    const newTime = this.currentTime.getTime() + minToAdd;
+    
+    this.currentTime = new Date(newTime);
+  },
+  addHours: function(hours) {
+    const hoursToAdd = hours * 60 * 60 * 1000;
+    const newTime = this.currentTime.getTime() + hoursToAdd;
+    
+    this.currentTime = new Date(newTime);
+  },
+  displayTime: function() {
+    const hours = this.currentTime.getHours();
+    const minutes = this.currentTime.getMinutes();
+    const seconds = this.currentTime.getSeconds();
+    
+    console.log(`${hours}:${minutes}:${seconds}`);
   }
+};
 
-  return result;
-}
-
-timerTime(time.userTimeH, time.userTimeM, time.userTimeS, 60);
-
+time.displayTime();
+time.addSeconds(40);
+time.displayTime();
+time.addMinutes(10);
+time.displayTime();
+time.addHours(1);
+time.displayTime();
