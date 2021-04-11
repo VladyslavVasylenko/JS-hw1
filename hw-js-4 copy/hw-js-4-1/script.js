@@ -32,12 +32,9 @@ function road(a){
     let result = a / speed;
     document.write("No relax. " + result + " hour " + a + " km.");
   } else if (a / speed > 4) {
-    let result = a / speed + relax;
+    let result = a / speed + Math.floor(a / speed / 4) * relax;
     document.write("You need " + result + " hour " + a + " km.");
-  } else if (a / speed >= 8) {
-    let result = a / speed + relax + 1;
-    document.write("You need " + result + " hour " + a + " km.");
-  }
+  } 
 }
 
 road(user);
