@@ -17,11 +17,11 @@ function timerTime (a,b,c,d) {
   let result;
 
   if (c <= 60) {
-    result = a + ':' + b + ':' + (d + c);
+    let result = a + ':' + b + ':' + (d + c);
     document.write(result + '<br>');
   } 
-  if (c >= 60) {
-    result =  a + ':' + (b + (d - c) / 60) + ':' + (d - c);
+  if (c > 60) {
+    let result =  a + ':' + (b + (d - c) / 60) + ':' + (d - c);
     document.write(result + '<br>');
   }
 

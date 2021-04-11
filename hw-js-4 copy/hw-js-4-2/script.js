@@ -20,7 +20,6 @@ function additions(obj1,obj2){
     let resultDownNumber = obj1.downNumber * obj2.downNumber;
     console.log(`${resultUpNumber}/${resultDownNumber}`);
   }
-
 }
 
 additions(firstNumber,secondNumber);
@@ -37,7 +36,6 @@ function subtraction(obj1,obj2){
     let resultDownNumber = obj1.downNumber * obj2.downNumber;
     console.log(`${resultUpNumber}/${resultDownNumber}`);
   }
-
 }
 
 subtraction(firstNumber,secondNumber);
