@@ -12,7 +12,7 @@ const time = {
     this.currentTime.setTime(this.currentTime.getTime() + hours);
   },
   displayTime: function() {
-    console.log(this.currentTime.toLocaleTimeString('en-GB'))
+    console.log(this.currentTime.toLocaleTimeString('en-GB'));
   }
 };
 
