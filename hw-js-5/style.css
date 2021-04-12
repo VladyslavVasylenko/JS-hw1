@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-p {
+.p {
   width: 50%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
