@@ -1,22 +1,20 @@
 "use strict";
 
-let audAcadem = [
-  { itemTab: 'Audience name', itemAud: 231, numSeats: 10, itemFaculty:"Web"},
-  { itemTab: 'Audience name', itemAud: 251, numSeats: 14, itemFaculty:"Designer"},
-  { itemTab: 'Audience name', itemAud: 271, numSeats: 20, itemFaculty:"Developer"},
-  { itemTab: 'Audience name', itemaud: 131, numSeats: 10, itemFaculty:"Web"},
-  { itemTab: 'Audience name', itemAaud: 151, numSeats: 12, itemFaculty:"Designer"},
-  { itemTab: 'Audience name', itemAud: 171, numSeats: 18, itemFaculty:"Developer"},
+const audAcadem = [
+  { id: 1, itemTab: 'Audience name', itemAud: 231, numSeats: 12, itemFaculty:"Web",},
+  { id: 2, itemTab: 'Audience name', itemAud: 251, numSeats: 15, itemFaculty:"Designer",},
+  { id: 3, itemTab: 'Audience name', itemAud: 271, numSeats: 20, itemFaculty:"Developer",},
+  { id: 4, itemTab: 'Audience name', itemAud: 131, numSeats: 10, itemFaculty:"Web",},
+  { id: 5, itemTab: 'Audience name', itemAud: 151, numSeats: 13, itemFaculty:"Designer",},
+  { id: 6, itemTab: 'Audience name', itemAud: 171, numSeats: 18, itemFaculty:"Developer",},
+  { id: 7, grupsName:'D1', studens:'15', itemFacult:"Developer", itemTab: 'Audience name', itemAud1: 271,  itemAud2: 171,},
+  { id: 8, grupsName:'W1', studens:'10', itemFacult:"Web", itemTab: 'Audience name', itemAud1: 231, itemAud2: 131,},
+  { id: 9, grupsName:'Des1', studens:'12', itemFacult:"Designer", itemTab: 'Audience name', itemAud1: 251, itemAud2: 151,},
 ];
 
-const grup = [
-  { grupsName:'D1', studens:'15', itemFaculty:"Developer", audienceA: 171, audienceB: 271},
-  { grupsName:'D2', studens:'10', itemFaculty:"Web", audienceA: 131, audienceB: 231},
-  { grupsName:'D3', studens:'12', itemFaculty:"Designer", audienceA: 251, audienceB: 151},
-]
-
+//shows Audience name
 function audience() {
-  for(let info of audAcadem) {
+  for(const info of audAcadem) {
     console.log (`${info.itemTab}, ${info.itemAud}`);
   }
   console.log("\n");
@@ -24,35 +22,65 @@ function audience() {
 
 audience();
 
-function seat() {
-  for(let info of audAcadem) {
-    console.log (`${info.itemTab}, ${info.itemAud}, number of seats: ${info.numSeats}`);
-  }
-  console.log("\n");
-};
+//shows classroom names based on faculty name
+let userFaculty = prompt('Your faculty? ', '');
 
-seat ();
-
-function faculty() {
-  for(let info of audAcadem) {
-    console.log (`${info.itemTab}, ${info.itemAud}, faculty: ${info.itemFaculty} `);
+function faculty(a){
+  if (a == "Developer") {
+    let user = audAcadem.find(item => item.id == 3);
+    console.log('Your ' + user.itemTab + ' ' + user.itemAud + ' faculty: ' + user.itemFaculty);
   }
-  console.log("\n");
-};
-
-faculty ()
-/*
-function showAud() {
-  for(let info of grup) {
-    console.log(`Grup: ${info.grupsName}, students: ${info.studens}, ${info.item_faculty}, audience: ${info. audienceA}, ${info. audienceB}.`);
+  if (a == "Web") {
+    let user = audAcadem.find(item => item.id == 1);
+    console.log('Your ' + user.itemTab + ' ' + user.itemAud + ' faculty: ' + user.itemFaculty);
   }
-  console.log("\n");
+  if (a == "Designer") {
+    let user = audAcadem.find(item => item.id == 2);
+    console.log('Your ' + user.itemTab + ' ' + user.itemAud + ' faculty: ' + user.itemFaculty);
+  } 
+  else if (a !== "Web" && "Designer" && "Developer"){
+    console.log('We doesn`t have this faculty.');
+  }
 }
 
-showAud ();*/
+faculty(userFaculty);
 
-function showAud() {
+//Displays audiences that are appropriate for the broadcast group.
+let userGrup = prompt('Your grup? ', '');
 
+function grups(a){
+  if (a == "D1") {
+    let user = audAcadem.find(item => item.id == 7);
+    console.log('Your grups ' + user.grupsName + ', students in a group: ' + user.studens + ', faculty: ' + user.itemFacult + ', ' + user.itemTab + ' ' + user.itemAud1 + ', ' + user.itemAud2);
+  }
+  if (a == "W1") {
+    let user = audAcadem.find(item => item.id == 8);
+    console.log('Your grups ' + user.grupsName + ', students in a group: ' + user.studens + ', faculty: ' + user.itemFacult + ', ' + user.itemTab + ' ' + user.itemAud1 + ', ' + user.itemAud2);
+  }
+  if (a == "Des1") {
+    let user = audAcadem.find(item => item.id == 9);
+    console.log('Your grups ' + user.grupsName + ', students in a group: ' + user.studens + ', faculty: ' + user.itemFacult + ', ' + user.itemTab + ' ' + user.itemAud1 + ', ' + user.itemAud2);
+  } 
+  else if (a !== "W1" && "Des1" && "D1"){
+    console.log('We doesn`t have this grups.');
+  }
 }
 
-//переделать добавить функции в массивы и разбить все отдельно для вызова
+grups(userGrup);
+
+//sorting audiences by the number of seats
+function sortingAudiences (){
+  let audFi = audAcadem.find(item => item.id == 1);
+  let audSc = audAcadem.find(item => item.id == 2);
+  let audTr = audAcadem.find(item => item.id == 3);
+  let audFr = audAcadem.find(item => item.id == 4);
+  let audFv = audAcadem.find(item => item.id == 5);
+  let audSx = audAcadem.find(item => item.id == 6);
+  console.log('List audience: ' + '\n' + audTr.itemAud + '\n' + audSx.itemAud + '\n' + audSc.itemAud + '\n' + audFv.itemAud + '\n' + audFi.itemAud + '\n' + audFr.itemAud);
+}
+
+sortingAudiences();
+
+//sort for name
+audAcadem.sort( (a, b) => a - b );
+console.log(audAcadem[itemFacult]);
