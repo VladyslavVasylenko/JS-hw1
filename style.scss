@@ -27,7 +27,8 @@ body{
   width: 20%;
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.219);
   padding: 1%;
 }
@@ -35,6 +36,8 @@ body{
 .header-container__item { 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
+  padding-bottom: 10%;
+
 }
 
 .header-container__item--item{
