@@ -7,15 +7,15 @@ function square (a, b) {
   let result;
 
   if (result = (a * b) / 2) {
-    alert("The area of the triangle is: " + result);
+    console.log("The area of the rectangle is: " + result);
 
     return result
-  } else if (result = a / 2) {
-    alert("The area of the square is: " + result);
+  } else if (result = a / 2 ) {
+    console.log("The area of the square is: " + result);
 
     return result
   } else if (result = b / 2) {
-    alert("The area of the square is: " + result);
+    console.log("The area of the square is: " + result);
 
     return result
   }
