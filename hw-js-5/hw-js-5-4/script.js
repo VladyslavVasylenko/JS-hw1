@@ -79,8 +79,26 @@ function sortingAudiences (){
   console.log('List audience: ' + '\n' + audTr.itemAud + '\n' + audSx.itemAud + '\n' + audSc.itemAud + '\n' + audFv.itemAud + '\n' + audFi.itemAud + '\n' + audFr.itemAud);
 }
 
-sortingAudiences();
+sortingAudiences();// от большого к меньшему
+
+// через метод sort
+audAcadem.sort(function (a, b) {
+  return a.numSeats - b.numSeats;
+});
+
+console.log(audAcadem.sort(audAcadem.numSeats));
+
+
+
 
 //sort for name
-audAcadem.sort( (a, b) => a - b );
-console.log(audAcadem[itemFacult]);
+audAcadem.sort(function (a, b) {
+  if (a.itemAud > b.itemAud) {
+    return 1;
+  }
+  if (a.itemAud < b.itemAud) {
+    return -1;
+  }
+  return 0;
+});
+console.log(audAcadem.sort());
