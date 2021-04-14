@@ -1,25 +1,33 @@
 "use strict";
+document.getElementsByClassName('button')[0].addEventListener('click', open);
+function open(){
+  alert('Very interesting homework for me.');
+}
 
-const btn = document.createElement("button");
-const p = document.createElement("p");
-p.textContent = "Open";
-btn.append(p);
-mainDiv.append(btn);
-btn.addEventListener("click", () => {
-  const div = document.createElement("div");
-  div.setAttribute("id", "modal__div");
-  const p = document.createElement("p");
-  p.textContent = "Noting to read here, just close it";
-  div.append(p);
-  const innerBtn = document.createElement("button");
-  const innerBtnP = document.createElement("p");
-  innerBtnP.textContent = "Close";
-  innerBtn.append(innerBtnP);
-  div.append(innerBtn);
-  mainDiv.append(div);
-  btn.disabled = true;
-  innerBtn.addEventListener("click", () => {
-    div.remove();
-    btn.disabled = false;
-  });
-});
+document.getElementsByClassName('buttonOne')[0].addEventListener('click', mModal);
+function mModal (){
+  alert('Very interesting homework for me.');
+}
+
+let modal = document.getElementById('myModal');
+
+let btn = document.getElementById("myBtn");
+
+let closed = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+closed.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
