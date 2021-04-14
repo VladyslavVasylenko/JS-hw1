@@ -1,14 +1,25 @@
 "use strict";
 
-let userNumFirst = +prompt('Your number?', ''); 
-let userNumSecond = +prompt('Your number?', ''); 
-let userNumThree = +prompt('Your number?', ''); 
+const time = {
+	currentTime: new Date(),
+  addSeconds: function(seconds) {
+    this.currentTime.setSeconds(this.currentTime.getSeconds() + seconds);
+  },
+  addMinutes: function(minutes) {
+    this.currentTime.setMinutes(this.currentTime.getMinutes() + minutes);
+  },
+  addHours: function(hours) { 
+    this.currentTime.setTime(this.currentTime.getTime() + hours);
+  },
+  displayTime: function() {
+    console.log(this.currentTime.toLocaleTimeString('en-GB'));
+  }
+};
 
-function numbers (a,b,c) {
-  let result = (' ' + a + b + c);
-  let number = Number(result);
-  alert('Your number: ' + number);
-  console.log(typeof number);
-}
-
-numbers(userNumFirst, userNumSecond, userNumThree);
+time.displayTime();
+time.addSeconds(40);
+time.displayTime();
+time.addMinutes(10);
+time.displayTime();
+time.addHours(1);
+time.displayTime();
