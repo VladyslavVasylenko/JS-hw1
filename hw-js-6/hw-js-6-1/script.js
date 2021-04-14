@@ -13,10 +13,13 @@ const playList = [
 
 let list = document.getElementById("list");
 list.style.fontFamily = 'Franklin Gothic Medium';
+list.style.fontSize = '20px';
+list.style.listStyleType = 'upper-roman';
+list.style.color = 'green';
 list.style.margin = '3% 5%';
 
-for (let i = 1; i < 9; i++) {
+for (let i = 0; i < 8; i++) {
   let li = document.createElement('li');
-  li.innerHTML = playList.author + ' : ' + playList.song;
+  li.innerHTML = playList[i].author + ': ' + playList[i].song;
   list.appendChild(li);
 };
