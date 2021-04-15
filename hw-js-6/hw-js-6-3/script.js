@@ -1,22 +1,31 @@
 "use strict";
 
-const trafficLights = document.querySelector("div.traffic__light");
+let timer = null, 
+  counter = 0; 
+const signal = Array.from(document.querySelectorAll('.signal')),
+  btnStart = document.getElementById('start'),
+  btnStop = document.getElementById('stop');
 
-const redlight = document.getElementById("red");
-const yellowlight = document.getElementById("yellow");
-const greenlight = document.getElementById("green");
-const butn = document.getElementById("btn");
+const init = () => {
+  btnStart.disabled = true;
+  btnStop.disabled = false;
+  let cs = signal[(counter++) % 3]; 
+  
+  signal.forEach(e => e.classList[e === cs ? 'add' : 'remove'](e.dataset.light));
 
-butn.addEventListener("click", function() {
-  if (redlight.classList.contains("traffic__red")) {
-    redlight.classList.remove("traffic__red");
-    yellowlight.classList.add("traffic__yellow");
-  } else if (yellowlight.classList.contains("traffic__yellow")) {
-    yellowlight.classList.remove("traffic__yellow");
-    greenlight.classList.add("traffic__green");
-  } else if (greenlight.classList.contains("traffic__green")) {
-    greenlight.classList.remove("traffic__green");
-    redlight.classList.add("traffic__red");
-  }
-});
-© 2021 GitHub, Inc.
+  timer = setTimeout(init, 5000);
+};
+
+const finish = () => {
+  clearTimeout(timer); 
+  
+  signal.forEach(e => e.classList.remove(e.dataset.light));
+  
+  counter = 0;
+  
+  btnStart.disabled = false;
+  btnStop.disabled = true;
+};
+
+btnStart.addEventListener('click', init);
+btnStop.addEventListener('click', finish);
