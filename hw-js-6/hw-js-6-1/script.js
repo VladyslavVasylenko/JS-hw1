@@ -18,7 +18,7 @@ list.style.listStyleType = 'upper-roman';
 list.style.color = 'green';
 list.style.margin = '3% 5%';
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < playList.length; i++) {
   let li = document.createElement('li');
   li.innerHTML = playList[i].author + ': ' + playList[i].song;
   list.appendChild(li);
