@@ -1,20 +1,20 @@
 "use strict";
 
-const mainDiv = document.getElementById("content");
+const mainContentEl = document.getElementById("content");
 
-const tableDiv = document.createElement("div");
-tableDiv.setAttribute("id","content__tableDiv");
-tableDiv.className = "content__tableDiv";
+const tableWrapper = document.createElement("div");
+tableWrapper.setAttribute("id","table-wrapper");
+tableWrapper.className = "table-wrapper";
 
-const tableTag = document.createElement("table");
-tableTag.setAttribute("id", "content__table");
-tableTag.className = "content__table";
+const tableEl = document.createElement("table");
+tableEl.setAttribute("id", "content-table");
+tableEl.className = "content-table";
 
-tableDiv.append(tableTag);
-mainDiv.append(tableDiv);
+tableWrapper.append(tableEl);
+mainContentEl.append(tableWrapper);
 
 class Employee {
-  constructor(name, position, department, salary){
+  constructor(name, position, department, salary) {
     this.name = name;
     this.position = position;
     this.department = department;
@@ -22,7 +22,7 @@ class Employee {
   }
 }
 
-const arrEmp = [
+const employees = [
   new Employee("Vladyslav Vasylenko", "Manager", "Sales", 5000),
   new Employee("Olga Vasylenko", "DevOps Engineer", "Sales", 1000),
   new Employee("Vladyslav Sozonov", "Manager", "Sales", 7000),
@@ -44,18 +44,17 @@ const arrEmp = [
   new Employee("Vladyslav Vasylenko", "Manager", "Sales", 5000),
 ];
 
-class EmpTable{
-  constructor(arr){
-    this.arr = arr;
+class EmpTable {
+  constructor(employees) {
+    this.employees = employees;
   }
 
   getHtml() {
-    const table = document.getElementById("contant__table");
+    const table = document.getElementById("content-table");
     
-    const array = this.arr;
+    const employees = this.employees;
 
     const head = document.createElement("tr");
-    head.setAttribute("style", "font-size:18px;");
 
     const th1 = document.createElement("th");
     th1.textContent = "Name";
@@ -67,30 +66,40 @@ class EmpTable{
     th3.textContent = "Dapartment";
 
     const th4 = document.createElement("th");
-    th1.textContent = "Salary ($)";
+    th4.textContent = "Salary ($)";
 
     head.append(th1);
+
     head.append(th2);
+
     head.append(th3);
+
     head.append(th4);
+
     table.append(head);
 
-    for (let i in array) {
+    for (let i in employees) {
       let tr = document.createElement("tr");
+
       table.append(tr);
-      for (let j in array[i]) {
+
+      for (let j in employees[i]) {
         let td = document.createElement("td");
-        td.textContent = array[i][j];
+
+        td.textContent = employees[i][j];
+
         tr.append(td);
+
         td.setAttribute("style", "padding: 5px 10px; font-size:18px;");
       }
     }
+
     table.setAttribute("border", "2");
-    table.setAttribute("bordercolor", "brown");
+    table.setAttribute("bordercolor", "blue");
     table.setAttribute("width", "60%");
-    table.setAttribute("style", "margin: 0 auto; background-color: lightgrey;");
+    table.setAttribute("style", "margin: 0 auto; background-color: ;");
   }
 }
 
-const tableObj = new EmpTable(arrEmp);
+const tableObj = new EmpTable(employees);
 tableObj.getHtml();
