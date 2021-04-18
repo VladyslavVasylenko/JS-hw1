@@ -97,7 +97,7 @@ class EmpTable {
     table.setAttribute("border", "2");
     table.setAttribute("bordercolor", "blue");
     table.setAttribute("width", "60%");
-    table.setAttribute("style", "margin: 0 auto; background-color: ;");
+    table.setAttribute("style", "margin: 0 auto; background-color: white;");
   }
 }
 
