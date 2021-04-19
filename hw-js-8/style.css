@@ -72,6 +72,7 @@ body {
   font-size: 24px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #0022ff;
+  text-align: center;
 }
 
 input {
@@ -248,5 +249,37 @@ input {
   to {
     visibility: hidden;
   }
+}
+
+.list-hw-js-8 {
+  list-style: none;
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #0022ff;
+  text-align: left;
+}
+
+.view,
+.area {
+  height: 150px;
+  width: 400px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.view {
+  padding: 2px;
+  border: 1px solid black;
+}
+
+.area {
+  display: none;
+  border: 3px groove blue;
+  padding: 0px;
+}
+
+.area:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
