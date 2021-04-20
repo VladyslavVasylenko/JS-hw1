@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100%;
   height: 100%;
@@ -281,5 +282,46 @@ input {
 
 .area:focus {
   outline: none;
+}
+
+.content-sort table {
+  border-collapse: collapse;
+}
+
+.content-sort th {
+  color: #ffebcd;
+  background: #008b8b;
+  cursor: pointer;
+}
+
+.content-sort td,
+.content-sort th {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid #846868;
+}
+
+.content-sort tbody tr:nth-child(even) {
+  background: #e3e3e3;
+}
+
+.content-sort th.sorted[data-order="1"],
+.content-sort th.sorted[data-order="-1"] {
+  position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+  right: 8px;
+  position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+  content: "▼";
+}
+
+th.sorted[data-order="1"]::after {
+  content: "▲";
 }
 /*# sourceMappingURL=style.css.map */
