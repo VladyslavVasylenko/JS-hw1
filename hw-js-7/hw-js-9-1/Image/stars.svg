@@ -1,0 +1,60 @@
+<svg id="stars" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131.25" height="18.125" viewBox="0 0 131.25 18.125">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #bdc3c7;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4 {
+        filter: url(#filter-4);
+      }
+
+      .cls-5 {
+        filter: url(#filter-5);
+      }
+    </style>
+    <filter id="filter" x="120.406" y="463.469" width="19.25" height="18.125" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#ffdd3f"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="148.406" y="463.469" width="19.25" height="18.125" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#ffdd3f"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="176.406" y="463.469" width="19.25" height="18.125" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#ffdd3f"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="204.406" y="463.469" width="19.25" height="18.125" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#ffdd3f"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="232.406" y="463.469" width="19.25" height="18.125" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#4b536b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="favourite" class="cls-1" d="M125.335,481.3l4.715-2.235,4.815,2.26c-0.607-.285,1.566,1.241,1.365-0.876-0.192-2.036-.5-5.306-0.5-5.306l3.488-3.884c-0.56.623,1.54-1.079-.415-1.448-1.977-.373-5.52-0.634-5.52-0.634s-1.409-3.255-2.449-5.055c0.484,0.838-.549-1.851-1.587-0.039s-2.544,5.108-2.544,5.108-3.436.268-5.414,0.647c0.775-.148-1.81-0.08-0.5,1.375l3.57,3.953s-0.3,3.284-.484,5.319C123.925,479.961,123.2,482.313,125.335,481.3Z" transform="translate(-120.406 -463.469)"/>
+  <path id="favourite_copy" data-name="favourite copy" class="cls-2" d="M153.335,481.3l4.715-2.235,4.815,2.26c-0.607-.285,1.566,1.241,1.365-0.876-0.192-2.036-.5-5.306-0.5-5.306l3.488-3.884c-0.56.623,1.54-1.079-.415-1.448-1.977-.373-5.52-0.634-5.52-0.634s-1.409-3.255-2.449-5.055c0.484,0.838-.549-1.851-1.587-0.039s-2.544,5.108-2.544,5.108-3.436.268-5.414,0.647c0.775-.148-1.81-0.08-0.5,1.375l3.57,3.953s-0.3,3.284-.484,5.319C151.925,479.961,151.2,482.313,153.335,481.3Z" transform="translate(-120.406 -463.469)"/>
+  <path id="favourite_copy_2" data-name="favourite copy 2" class="cls-3" d="M181.335,481.3l4.715-2.235,4.815,2.26c-0.607-.285,1.566,1.241,1.365-0.876-0.192-2.036-.5-5.306-0.5-5.306l3.488-3.884c-0.56.623,1.54-1.079-.415-1.448-1.977-.373-5.52-0.634-5.52-0.634s-1.409-3.255-2.45-5.055c0.485,0.838-.548-1.851-1.586-0.039s-2.544,5.108-2.544,5.108-3.436.268-5.414,0.647c0.775-.148-1.81-0.08-0.5,1.375l3.57,3.953s-0.3,3.284-.484,5.319C179.925,479.961,179.2,482.313,181.335,481.3Z" transform="translate(-120.406 -463.469)"/>
+  <path id="favourite_copy_3" data-name="favourite copy 3" class="cls-4" d="M209.335,481.3l4.715-2.235,4.815,2.26c-0.607-.285,1.566,1.241,1.365-0.876-0.192-2.036-.5-5.306-0.5-5.306l3.488-3.884c-0.56.623,1.54-1.079-.415-1.448-1.977-.373-5.52-0.634-5.52-0.634s-1.409-3.255-2.449-5.055c0.484,0.838-.549-1.851-1.587-0.039s-2.544,5.108-2.544,5.108-3.436.268-5.414,0.647c0.775-.148-1.81-0.08-0.5,1.375l3.57,3.953s-0.3,3.284-.484,5.319C207.925,479.961,207.2,482.313,209.335,481.3Z" transform="translate(-120.406 -463.469)"/>
+  <path id="favourite_copy_4" data-name="favourite copy 4" class="cls-5" d="M237.335,481.3l4.715-2.235,4.815,2.26c-0.607-.285,1.566,1.241,1.365-0.876-0.192-2.036-.5-5.306-0.5-5.306l3.488-3.884c-0.56.623,1.54-1.079-.415-1.448-1.977-.373-5.52-0.634-5.52-0.634s-1.409-3.255-2.449-5.055c0.484,0.838-.549-1.851-1.587-0.039s-2.544,5.108-2.544,5.108-3.436.268-5.414,0.647c0.775-.148-1.81-0.08-0.5,1.375l3.57,3.953s-0.3,3.284-.484,5.319C235.925,479.961,235.2,482.313,237.335,481.3Z" transform="translate(-120.406 -463.469)"/>
+</svg>

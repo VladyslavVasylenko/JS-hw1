@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body{
   width: 100%;
   height: 100%;
@@ -73,143 +77,121 @@ input{
   }
 }
 
-//hw-js-6-2
-#myBtn {
-  background-color: #5eb027c4;
-  color: white;
-  padding: 12px 16px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  width: 180px;
+.image{
+  width: 100%;
+  margin-top: 5%;
 }
 
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-}
-
-.modal-content {
-  position: relative;
-  background-color: #ff9216e0;
+//hw-js-9-1
+.conteiner-tabs { 
+  width: 100%;
+  height: 654px;
   margin: auto;
-  padding: 0;
-  background-color: #ff9216e0;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
+  padding-top: 33px;
+  background: url(./hw-js-9-1/Image/BG.png) center no-repeat;
+  font-family: 'Lato', sans-serif;
 }
 
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+.tabs { 
+  width: 600px;
+  height: 115px;
+  margin: 0 auto;
+  background-color: #2b3040;
 }
 
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+.tabs-nav { 
+  margin-left: -40px;
+  padding-top: 33px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
 }
 
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: rgb(21, 255, 0);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #ff9216e0;
-  color: white;
-}
-
-.modal-body {
-  padding: 2px 16px;
-  color: white;
-}
-
-//hw-js-6-3
-.container{
+.tabs-nav__item{
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
+  text-decoration: none;
+  padding-bottom: 25px;
+  color:  #b7bacd;
+  fill: #b7bacd;
 }
 
-.border{
-  padding-top: 3%;
+.tabs-nav .tabs-nav__item.active{
+  border-bottom: 1px solid #fff;
+  color: rgb(255, 255, 255);
+  fill: rgb(255, 255, 255);
+}  
+
+.text-tab { 
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  padding-top: 15%;
 }
 
-.signal {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  margin: 0 auto;
-  border-radius: 70px;
-  margin: 2px;
-  background-color: #999;
-  border: 2px solid #000;
+.tabs-items { 
+  width: 600px;
+  height: 426px;
+  margin: auto;
+  background-color: #212534;
 }
 
-.signal::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  visibility: hidden;
+.tabs-item { 
+  padding-top: 55px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.red::after,
-.yellow::after,
-.green::after {
-  visibility: visible;
-  -webkit-animation: blink .75s steps(4, start) 2s infinite;
-  animation: blink .75s steps(4, start) 2s infinite;
+.img { 
+  width: 100%;
+  height: 100%;
+  padding-right: 50px;
 }
 
-.red::after {
-  background-color: #f00;
+.img__poster { 
+  margin-bottom: 26px;
 }
 
-.yellow::after {
-  background-color: #ff0;
+.img__stars { 
+  padding-left: 8%;
 }
 
-.green::after {
-  background-color: #060;
+.block-contents { 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@-webkit-keyframes blink {
-  to {
-    visibility: hidden;
-  }
+.block-content__title { 
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  color: rgb(255, 255, 255);
 }
 
-@keyframes blink {
-  to {
-    visibility: hidden;
-  }
+.block-content__subtitle { 
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
 }
+
+.img-rating { 
+  width: 69px;
+  height: 69px;
+}
+
+.conteiner-text { }
+.conteiner-text__text { }
+.conteiner-buy { }
+.conteiner-buy__subtitle { }
+.conteiner-buy__price { }
+.conteiner-buy__btn { }
+.conteiner-buy__btn--btn { }
+.tabs-item-second__img { }
+.tabs-item-second__text { }
+.conteiner-price { }
+.tabs-item-three__subtitle { }
+.tabs-item-three__price { }
+.tabs-item-three__btn { }
