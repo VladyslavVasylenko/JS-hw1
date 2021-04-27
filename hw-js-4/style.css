@@ -60,10 +60,11 @@ input {
   margin: 0 auto;
   list-style: circle;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: left;
+  text-align: center;
 }
 
 .list-hw4 li {
   padding-bottom: 1%;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
