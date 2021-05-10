@@ -11,7 +11,7 @@ tableEl.setAttribute("id", "content-table");
 tableEl.className = "content-table";
 
 tableWrapper.append(tableEl);
-mainContentEl.append(table-Wrapper);
+mainContentEl.append(tablewrapper);
 
 class Employee {
   constructor(name, position, department, salary) {
