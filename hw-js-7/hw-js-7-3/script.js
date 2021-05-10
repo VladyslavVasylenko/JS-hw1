@@ -10,7 +10,7 @@ const tableEl = document.createElement("table");
 tableEl.setAttribute("id", "content-table");
 tableEl.className = "content-table";
 
-tableWrapper.append(tableEl);
+tablewrapper.append(tableEl);
 mainContentEl.append(tablewrapper);
 
 class Employee {
