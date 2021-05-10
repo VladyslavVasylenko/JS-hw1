@@ -3,8 +3,8 @@
 const mainContentEl = document.getElementById("content");
 
 const tableWrapper = document.createElement("div");
-tableWrapper.setAttribute("id","table-wrapper");
-tableWrapper.className = "table-wrapper";
+tablewrapper.setAttribute("id","table-wrapper");
+tablewrapper.className = "table-wrapper";
 
 const tableEl = document.createElement("table");
 tableEl.setAttribute("id", "content-table");
