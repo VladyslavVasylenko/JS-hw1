@@ -2,16 +2,16 @@
 
 const mainContentEl = document.getElementById("content");
 
-const tableWrapper = document.createElement("div");
-tablewrapper.setAttribute("id","table-wrapper");
-tablewrapper.className = "table-wrapper";
+const tableDiv = document.createElement("div");
+tableDiv.setAttribute("id","content__tableDiv");
+tableDiv.className = "content__tableDivr";
 
 const tableEl = document.createElement("table");
 tableEl.setAttribute("id", "content-table");
 tableEl.className = "content-table";
 
-tablewrapper.append(tableEl);
-mainContentEl.append(tablewrapper);
+tableDiv.append(tableEl);
+mainContentEl.append(tableDiv);
 
 class Employee {
   constructor(name, position, department, salary) {
