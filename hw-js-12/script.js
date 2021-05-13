@@ -4,11 +4,19 @@ const API = 'https://www.omdbapi.com/?apikey=49f3373f';
 
 const FORM = document.getElementById("formSearch");
 
+const favorite__class = 'favorite';
+
+const key = 'favorite';
+
 let movieName = '';
 
 let movieType = '';
 
 let currentPage = 1;
+
+let storage = window.localStorage;
+
+let  favoritesList = storage.getItem(key) ? storage.getItem(key).split('.') : [];
 
 function sendRequest() {
   let request = new XMLHttpRequest();
@@ -55,13 +63,19 @@ function printResponse(response) {
   response['Search'].forEach(element => {
     let poster = (element['Poster'] != 'N/A') ? `<img src="${element['Poster']}" alt="${element['Title']} poster" class="results__poster">` : '';
     let imdbId = element['imdbID'];
+    let isFavorite = (favoritesList.indexOf(imdbId) < 0) ? '' : favorite__class;
+
 
     $(".result-list").append(`<li>      
       <aticle class="results">
         <div>
           <header class="results__header">${element['Title']}</header>
           <p class="results__year">${element['Year']}</p>
-          <button class="btn btn-details" onclick=printDetails('${imdbId}')>Details</button>
+          <div class="result-btn-conteiner">
+            <button class="btn btn-details" onclick=printDetails('${imdbId}')>Details</button>
+            <button class="btn btn-favorite ${isFavorite}" onclick='savedFavorite(this, "${imdbId}")'>Add favorite</button>
+          </div>
+
         </div>
         ${poster}
       </aticle>
@@ -86,6 +100,12 @@ function printPages(totalResults) {
   })
 }
 
+function savedFavorite(button, id) {
+  button.classList.toggle(favorite__class);
+  favoritesList.indexOf(id) < 0 ? favoritesList.push(id) : favoritesList.splice(favoritesList.indexOf(id), 1);
+  storage.setItem(key, favoritesList);
+}
+
 window.addEventListener("load", function () {
   FORM.addEventListener("submit", function (event) {
     $(".result").empty();
@@ -99,3 +119,5 @@ window.addEventListener("load", function () {
     sendRequest();
   });
 });
+
+console.log(localStorage);
