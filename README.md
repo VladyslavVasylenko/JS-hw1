@@ -1,2 +1,0 @@
-# JS-hw
-JS-hw
