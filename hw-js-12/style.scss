@@ -169,12 +169,27 @@ body{
     margin-bottom: 1%;
   }
 }
+
 .result-btn-conteiner {
   display: flex;
   flex-direction: column;
 }
 
 .btn-favorite {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  background-color: #00c3ff;
+}
+
+.btn-favorite::after {
+  background-color: #ff0000;
+}
+
+.btn-favorite::before {
+  background-color: #ff0000;
+}
+
+.btn-showfavorite {
   font-size: 14px;
   color: rgb(255, 255, 255);
   background-color: #00c3ff;

@@ -45,7 +45,7 @@ function printDetails(id) {
           <p class="details__subtitle">${movie['Country']}</p>
           <p class="details__text">${movie['Awards']}</p>
           <p class="details__text">${movie['Plot']}</p>
-        </div> 
+        </div>
         `);
     } else alert('ERROR! YOU BROKE INTERNET!');
   };
@@ -65,7 +65,6 @@ function printResponse(response) {
     let imdbId = element['imdbID'];
     let isFavorite = (favoritesList.indexOf(imdbId) < 0) ? '' : favorite__class;
 
-
     $(".result-list").append(`<li>      
       <aticle class="results">
         <div>
@@ -75,7 +74,6 @@ function printResponse(response) {
             <button class="btn btn-details" onclick=printDetails('${imdbId}')>Details</button>
             <button class="btn btn-favorite ${isFavorite}" onclick='savedFavorite(this, "${imdbId}")'>Add favorite</button>
           </div>
-
         </div>
         ${poster}
       </aticle>
@@ -86,7 +84,8 @@ function printResponse(response) {
 function printPages(totalResults) {
   if (!totalResults) return;
 
-  $(".result").append(`<ul class='result-pages'></ul `);
+  $(".result").append(`<ul class='result-pages'></ul>      <button class="btn btn-showfavorite" onclick='showFavorite()'>Show Favorite</button> 
+  <p class="details__title" id="shfavorite"></p>`);
   for (let i = 1; i <= Math.ceil(totalResults / 10); i++) {
     $(".result-pages").append(`<li class="result-pages__page">${i}</li>`);
   }
@@ -106,6 +105,10 @@ function savedFavorite(button, id) {
   storage.setItem(key, favoritesList);
 }
 
+function showFavorite() {
+  document.getElementById('shfavorite').innerHTML = localStorage.favorite;
+}
+
 window.addEventListener("load", function () {
   FORM.addEventListener("submit", function (event) {
     $(".result").empty();
@@ -119,5 +122,3 @@ window.addEventListener("load", function () {
     sendRequest();
   });
 });
-
-console.log(localStorage);
